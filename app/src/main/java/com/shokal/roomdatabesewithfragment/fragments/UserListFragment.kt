@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.fragment_user_list.*
 import kotlinx.android.synthetic.main.list_item.*
 
 class UserListFragment : Fragment() {
+
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewModel: UserViewModel
 
@@ -41,9 +42,8 @@ class UserListFragment : Fragment() {
         addUserViewButton.setOnClickListener {
             findNavController().navigate(R.id.action_userListFragment_to_addUserFragment)
         }
-
-
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_item, menu)

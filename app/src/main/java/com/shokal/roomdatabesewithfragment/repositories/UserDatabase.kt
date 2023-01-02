@@ -4,9 +4,11 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import com.shokal.roomdatabesewithfragment.adapters.Converter
 import com.shokal.roomdatabesewithfragment.models.User
 
-@Database(entities = [User::class], version = 1)
+@Database(entities = [User::class], version = 3)
 abstract class UserDatabase: RoomDatabase() {
     abstract fun userDao(): UserDao
 
@@ -23,7 +25,9 @@ abstract class UserDatabase: RoomDatabase() {
                     context.applicationContext,
                     UserDatabase::class.java,
                     "app_database"
-                ).build()
+                )
+                    .fallbackToDestructiveMigration()
+                    .build()
                 INSTANCE = instance
                 return instance
             }

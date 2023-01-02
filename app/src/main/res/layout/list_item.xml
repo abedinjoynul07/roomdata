@@ -77,7 +77,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="8dp"
-            android:backgroundTint="#ffff"
+            android:backgroundTint="#DFD8D8"
             android:contentDescription="@string/app_name"
             android:minHeight="48dp"
             android:src="@drawable/ic_baseline_edit_24"
@@ -87,22 +87,6 @@
             app:layout_constraintVertical_bias="0.14"
             tools:ignore="DuplicateClickableBoundsCheck,DuplicateSpeakableTextCheck" />
 
-        <ImageButton
-            android:id="@+id/updateConfirm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="8dp"
-            android:backgroundTint="#DFD8D8"
-            android:contentDescription="@string/app_name"
-            android:minHeight="48dp"
-            android:src="@drawable/ic_baseline_check_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.14" />
 
         <ImageButton
             android:id="@+id/delete"
